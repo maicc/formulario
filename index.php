@@ -1,9 +1,10 @@
 <?php
-//include("config/Conexion.php");
+include("config/Conexion.php");
 
-//$mysqli = new Conexion();
+$mysqli = new Conexion();
 
-//echo $mysqli->conexionBD();
+echo $mysqli->conexionBD();
+
 
 ?>
 
@@ -32,17 +33,23 @@
         <input type="text" id="sexo" name="sexo"><br>
 
         <label for="pais">Pais de residencia:</label><br>
-        <input type="text" id="pais" name="pais"><br>
+        <?php $mysqli->consultarPais(); ?><br>
 
         <label for="nacionalidad">Nacionalidad:</label><br>
-        <input type="text" id="nacionalidad" name="nacionalidad"><br>
+        <?php $mysqli->consultarNacionalidad(); ?><br>
+
+        <label for="correo">correo:</label><br>
+        <input type="text" id="correo" name="correo"><br>
+
+        <label for="celular">Celular:</label><br>
+        <input type="text" id="celular" name="celular"><br>
 
         <label for="tema">tema:</label>
-        <input type="checkbox" id="tema" name="tema">
+        <label for="idk">idk</label> 
+        <input type="checkbox" id="idk" name="idk">
 
-        <label for="tema">celular</label>
-        <label for="tema">correo</label><br>
-
+        <label for="idk2">idk2</label> 
+        <input type="checkbox" id="idk2" name="idk2"> <br>
         <button type="submit" >enviar</button>
     </form>
 

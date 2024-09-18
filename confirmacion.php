@@ -12,21 +12,21 @@
 
     if (
         isset($_POST["nombre"]) && ($_POST["apellido"]) && ($_POST["edad"]) && ($_POST["sexo"]) &&
-        ($_POST["pais"])($_POST["nacionalidad"]) && ($_POST["tema"])
+        ($_POST["PAIS_NAC"]) && ($_POST["GENTILICIO_NAC"]) && ($_POST["idk"])
     ) {
         $nombre = $_POST['nombre'];
         $apellido = $_POST['apellido'];
         $edad = $_POST['edad'];
         $sexo = $_POST['sexo'];
-        $pais = $_POST['pais'];
-        $nacionalidad = $_POST['nacionalidad'];
-        $tema = $_POST['tema'];
+        $pais = $_POST['PAIS_NAC'];
+        $nacionalidad = $_POST['GENTILICIO_NAC'];
+        $tema = $_POST['idk'];
 
     } else {
 
     }
 
-    echo $nombre;
+    echo $pais;
     ?>
 
 </body>
