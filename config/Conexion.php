@@ -7,7 +7,7 @@ class Conexion
     public function conexionBD()
     {
         
-        $mysqli = new mysqli("localhost", "root", "", "");
+        $mysqli = new mysqli("localhost:3307", "root", "", "");
         if ($mysqli->connect_errno) {
            $devolver = "Error al conectar la base de datos";
         } else {
@@ -19,7 +19,7 @@ class Conexion
   
 
     public function insertar($nombre, $apellido, $edad, $sexo, $pais_residencia, $nacionalidad, $tema){
-        $mysqli = new mysqli("localhost", "root", "", "formulario");
+        $mysqli = new mysqli("localhost:3307", "root", "", "formulario");
         if($mysqli->query("insert into users values ($nombre, $apellido, $edad, $sexo, $pais_residencia, $nacionalidad, $tema)")){
             echo "fallo en realizar el insert".$mysqli->connect_errno;
         }
@@ -32,7 +32,7 @@ class Conexion
     }
 
     public function consultarPais(){
-        $mysqli = new mysqli("localhost", "root", "", "formulario");
+        $mysqli = new mysqli("localhost:3307", "root", "", "formulario");
         if ($resultado = $mysqli->query("SELECT PAIS_NAC FROM nacionalidad")) {
             $resultado->num_rows;
         
@@ -50,7 +50,7 @@ class Conexion
 
     public function consultarNacionalidad(){
 
-        $mysqli = new mysqli("localhost", "root", "", "formulario");
+        $mysqli = new mysqli("localhost:3307", "root", "", "formulario");
         if ($resultado = $mysqli->query("SELECT GENTILICIO_NAC FROM nacionalidad")) {
             $resultado->num_rows;
         
