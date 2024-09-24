@@ -30,7 +30,10 @@ echo $mysqli->conexionBD();
         <input type="text" id="edad" name="edad"><br>
 
         <label for="sexo">Sexo:</label><br>
-        <input type="text" id="sexo" name="sexo"><br>
+       <select name="sexo"> 
+        <option>F</option>
+        <option>M</option>
+       </select><br>
 
         <label for="pais">Pais de residencia:</label><br>
         <?php $mysqli->consultarPais(); ?><br>
@@ -39,10 +42,10 @@ echo $mysqli->conexionBD();
         <?php $mysqli->consultarNacionalidad(); ?><br>
 
         <label for="correo">correo:</label><br>
-        <input type="text" id="correo" name="correo"><br>
+        <input type="email" id="correo" name="correo"><br>
 
         <label for="celular">Celular:</label><br>
-        <input type="text" id="celular" name="celular"><br>
+        <input type="number" id="celular" name="celular"><br>
 
         <label for="tema">tema:</label>
         <label for="idk">idk</label> 

@@ -66,6 +66,14 @@ class Conexion
 
     }
 
+    public function selectTema(){
+        $mysqli = new mysqli("localhost", "root", "", "formulario");
+        
+
+    }
+
+
+
 
     public function exit(){
         exit();
