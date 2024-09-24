@@ -21,16 +21,16 @@ echo $mysqli->conexionBD();
 
     <form action="confirmacion.php" method="POST">
         <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre"><br>
+        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras" required><br>
 
         <label for="apellido">Apellido:</label><br>
-        <input type="text" id="apellido" name="apellido"><br>
+        <input type="text" id="apellido" name="apellido"pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras"  required><br>
 
         <label for="edad">Edad:</label><br>
-        <input type="text" id="edad" name="edad"><br>
+        <input type="number" id="edad" name="edad" pattern="\d+" title="Solo se permiten valores númericos" required><br>
 
         <label for="sexo">Sexo:</label><br>
-       <select name="sexo"> 
+       <select name="sexo" required> 
         <option>F</option>
         <option>M</option>
        </select><br>
@@ -42,17 +42,16 @@ echo $mysqli->conexionBD();
         <?php $mysqli->consultarNacionalidad(); ?><br>
 
         <label for="correo">correo:</label><br>
-        <input type="email" id="correo" name="correo"><br>
+        <input type="email" id="correo" name="correo" required><br>
 
         <label for="celular">Celular:</label><br>
-        <input type="number" id="celular" name="celular"><br>
+        <input type="tel" id="celular" name="celular" pattern="\d+" title="Solo se permiten valores númericos" required><br>
 
         <label for="tema">tema:</label>
         <label for="idk">idk</label> 
         <input type="checkbox" id="idk" name="idk">
-
-        <label for="idk2">idk2</label> 
-        <input type="checkbox" id="idk2" name="idk2"> <br>
+        <label for="idk">idk2</label> 
+        <input type="checkbox" id="idk" name="idk"> <br>
         <button type="submit" >enviar</button>
     </form>
 

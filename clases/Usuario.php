@@ -1,5 +1,5 @@
 <?php
-class Persona
+class Usuario
 {
     private string $nombre;
     private string $apellido;
@@ -45,7 +45,7 @@ class Persona
     // Setter y Getter para edad
     public function setEdad($edad)
     {
-        if (isset($edad) && !empty($edad) && is_int($edad)) {
+        if (isset($edad) && !empty($edad) && is_numeric($edad)) {
             $this->edad = $edad;
         } else {
             echo "Ingrese una edad valida, debe ser un valor númerico.";
