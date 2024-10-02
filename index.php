@@ -5,7 +5,6 @@ $mysqli = new Conexion();
 
 echo $mysqli->conexionBD();
 
-
 ?>
 
 <!DOCTYPE html>
@@ -15,44 +14,79 @@ echo $mysqli->conexionBD();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <form action="confirmacion.php" method="POST">
-        <label for="nombre">Nombre:</label><br>
-        <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras" required><br>
+        <h2>Registro de Usuario</h2>
 
-        <label for="apellido">Apellido:</label><br>
-        <input type="text" id="apellido" name="apellido"pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras"  required><br>
+        <div class="form-group">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras" required>
+        </div>
 
-        <label for="edad">Edad:</label><br>
-        <input type="number" id="edad" name="edad" pattern="\d+" title="Solo se permiten valores númericos" required><br>
+        <div class="form-group">
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ]+" title="Solo se permiten letras" required>
+        </div>
 
-        <label for="sexo">Sexo:</label><br>
-       <select name="sexo" required> 
-        <option>F</option>
-        <option>M</option>
-       </select><br>
+        <div class="form-group">
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+        </div>
 
-        <label for="pais">Pais de residencia:</label><br>
-        <?php $mysqli->consultarPais(); ?><br>
+        <div class="form-group">
+            <label for="sexo">Sexo:</label>
+            <select name="sexo" required>
+                <option value="" disabled selected>Seleccione su sexo</option>
+                <option value="F">Femenino</option>
+                <option value="M">Masculino</option>
+            </select>
+        </div>
 
-        <label for="nacionalidad">Nacionalidad:</label><br>
-        <?php $mysqli->consultarNacionalidad(); ?><br>
+        <div class="form-group full-width">
+            <label for="pais">País de residencia:</label>
+            <?php $mysqli->consultarPais(); ?>
+        </div>
 
-        <label for="correo">correo:</label><br>
-        <input type="email" id="correo" name="correo" required><br>
+        <div class="form-group full-width">
+            <label for="nacionalidad">Nacionalidad:</label>
+            <?php $mysqli->consultarNacionalidad(); ?>
+        </div>
 
-        <label for="celular">Celular:</label><br>
-        <input type="tel" id="celular" name="celular" pattern="\d+" title="Solo se permiten valores númericos" required><br>
+        <div class="form-group">
+            <label for="correo">Correo:</label>
+            <input type="email" id="correo" name="correo" required>
+        </div>
 
-        <label for="tema">tema:</label>
-        <label for="idk">idk</label> 
-        <input type="checkbox" id="idk" name="idk">
-        <label for="idk">idk2</label> 
-        <input type="checkbox" id="idk" name="idk"> <br>
-        <button type="submit" >enviar</button>
+        <div class="form-group">
+            <label for="celular">Celular:</label>
+            <input type="tel" id="celular" name="celular" pattern="\d+" title="Solo se permiten valores númericos" required>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="tema">Temas de interés:</label>
+            <div class="checkbox-group">
+                <label for="python">
+                    <input type="checkbox" id="python" name="python"> Python
+                </label>
+                <label for="machinelearning">
+                    <input type="checkbox" id="machinelearning" name="machinelearning"> Machine Learning
+                </label>
+                <label for="blockchain">
+                    <input type="checkbox" id="blockchain" name="blockchain"> Blockchain
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group full-width">
+            <label for="observaciones">Observaciones o consultas sobre el evento:</label>
+            <textarea cols="40" rows="5" id="observaciones" name="observaciones"></textarea>
+        </div>
+
+        <button type="submit">Enviar</button>
     </form>
 
 </body>

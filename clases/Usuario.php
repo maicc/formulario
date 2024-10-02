@@ -11,6 +11,8 @@ class Usuario
     private $celular;
     private string $tema;
 
+    private string $observaciones;
+
     // Setter y Getter para nombre
     public function setNombre($nombre)
     {
@@ -132,15 +134,36 @@ class Usuario
         return $this->tema;
     }
 
-    public function verificarNull(){
+    public function verificarNull($nombre, $apellido, $edad, $sexo, $pais_residencia, $pais, $celular, $observaciones){
     
         if (
-            isset($_POST["nombre"]) || isset($_POST["apellido"]) || isset($_POST["edad"]) || isset($_POST["sexo"]) ||
-            isset($_POST["PAIS_NAC"]) || isset($_POST["GENTILICIO_NAC"]) || isset($_POST["idk"])
+            isset($nombre) && isset($apellido) && isset($edad) && isset($sexo) &&
+            isset($pais) && isset($pais_residencia) && isset($celular) && isset($observaciones) 
         ) {
-            echo "Todos los datos son obligatorios de completar en el formulario";
+            return "Todos los datos son obligatorios de completar en el formulario";
         }
 
+    }
+
+    public function verificarEmpty($nombre, $apellido, $edad, $sexo, $pais_residencia, $pais, $celular, $observaciones){
+    
+        if (
+            empty($nombre) && empty($apellido) && empty($edad) && empty($sexo) &&
+            empty($pais) && empty($pais_residencia) && empty($celular) && empty($observaciones) 
+        ) {
+            return "Todos los datos son obligatorios de completar en el formulario";
+        }
+
+    }
+
+    public function setObservaciones($observaciones)
+    {
+        $this->observaciones = $observaciones;
+    }
+
+    public function getObservaciones()
+    {
+        return $this->observaciones;
     }
 
 }

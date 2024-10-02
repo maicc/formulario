@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Sep 18, 2024 at 03:55 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 02-10-2024 a las 07:22:10
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `formulario`
+-- Base de datos: `formulario`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `formulario`
+-- Estructura de tabla para la tabla `formulario`
 --
 
 CREATE TABLE `formulario` (
@@ -35,13 +35,147 @@ CREATE TABLE `formulario` (
   `pais_residencia` varchar(40) DEFAULT NULL,
   `nacionalidad` varchar(40) DEFAULT NULL,
   `tema` varchar(40) DEFAULT NULL,
-  `edad` int(11) DEFAULT NULL
+  `edad` int(11) DEFAULT NULL,
+  `observaciones` varchar(240) DEFAULT NULL,
+  `celular` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `formulario`
+--
+
+INSERT INTO `formulario` (`id`, `nombre`, `apellido`, `sexo`, `pais_residencia`, `nacionalidad`, `tema`, `edad`, `observaciones`, `celular`) VALUES
+(1, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(2, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(3, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(4, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(5, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(6, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(7, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(8, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(9, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(10, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(11, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(12, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(13, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(14, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(15, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(16, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(17, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(18, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(19, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(20, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(21, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(22, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(23, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(24, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(25, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(26, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(27, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(28, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(29, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(30, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(31, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(32, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(33, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(34, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(35, 'juan', 'mock', 'M', 'Panamá', 'PANAMEÑA', 'on', 34, NULL, NULL),
+(36, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(37, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(38, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(39, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(40, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(41, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(42, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(43, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(44, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(45, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(46, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(47, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(48, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(49, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(50, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(51, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(52, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(53, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(54, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(55, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(56, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(57, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(58, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(59, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(60, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(61, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(62, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(63, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(64, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(65, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(66, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(67, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(68, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(69, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(70, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(71, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(72, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(73, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(74, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(75, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(76, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(77, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(78, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(79, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(80, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(81, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(82, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(83, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(84, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(85, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(86, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(87, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(88, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(89, 'juan', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(90, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(91, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(92, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(93, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(94, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(95, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(96, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(97, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(98, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(99, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(100, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(101, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(102, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(103, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(104, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(105, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(106, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(107, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(108, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(109, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(110, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(111, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(112, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(113, 'asdas', 'mock', 'F', 'Panamá', 'AFGANA', '', 34, NULL, NULL),
+(114, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', '', 34, NULL, NULL),
+(115, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', 'Python ', 34, NULL, NULL),
+(116, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', 'Machine Learning ', 34, NULL, NULL),
+(117, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', 'Blockchain', 34, NULL, NULL),
+(118, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', 'Python ', 34, 'Uwu', '345345'),
+(119, 'pene', 'asda', 'F', 'Panamá', 'ARGENTINA', 'Python ', 34, 'Hola me encanta el pene', '345345'),
+(120, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python ', 34, 'sadasd', '345345'),
+(121, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python ', 34, 'sadasd', '345345'),
+(122, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python ', 34, 'sadasd', '345345'),
+(123, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python ', 34, 'sadasd', '345345'),
+(124, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python Machine Learning Blockchain', 34, 'sadasd', '345345'),
+(125, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python Machine Learning Blockchain', 34, 'LA VIDA ES UN CICLOO', '345345'),
+(126, 'pene', 'asda', 'M', 'Armenia', 'BANGLADESÍ', 'Python Machine Learning Blockchain', 34, 'LA VIDA ES UN CICLOO', '345345');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `nacionalidad`
+-- Estructura de tabla para la tabla `nacionalidad`
 --
 
 CREATE TABLE `nacionalidad` (
@@ -52,7 +186,7 @@ CREATE TABLE `nacionalidad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `nacionalidad`
+-- Volcado de datos para la tabla `nacionalidad`
 --
 
 INSERT INTO `nacionalidad` (`id`, `PAIS_NAC`, `GENTILICIO_NAC`, `ISO_NAC`) VALUES
@@ -261,58 +395,69 @@ INSERT INTO `nacionalidad` (`id`, `PAIS_NAC`, `GENTILICIO_NAC`, `ISO_NAC`) VALUE
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tema`
+-- Estructura de tabla para la tabla `tema`
 --
 
 CREATE TABLE `tema` (
   `id` int(11) NOT NULL,
-  `tema` varchar(30) DEFAULT NULL,
-  `idUsuarios` int(11) DEFAULT NULL
+  `tema` varchar(20) DEFAULT NULL,
+  `usuarioID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `formulario`
+-- Indices de la tabla `formulario`
 --
 ALTER TABLE `formulario`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `nacionalidad`
+-- Indices de la tabla `nacionalidad`
 --
 ALTER TABLE `nacionalidad`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tema`
+-- Indices de la tabla `tema`
 --
 ALTER TABLE `tema`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `usuarioID` (`usuarioID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `formulario`
+-- AUTO_INCREMENT de la tabla `formulario`
 --
 ALTER TABLE `formulario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
--- AUTO_INCREMENT for table `nacionalidad`
+-- AUTO_INCREMENT de la tabla `nacionalidad`
 --
 ALTER TABLE `nacionalidad`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=202;
 
 --
--- AUTO_INCREMENT for table `tema`
+-- AUTO_INCREMENT de la tabla `tema`
 --
 ALTER TABLE `tema`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `tema`
+--
+ALTER TABLE `tema`
+  ADD CONSTRAINT `tema_ibfk_1` FOREIGN KEY (`usuarioID`) REFERENCES `formulario` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
